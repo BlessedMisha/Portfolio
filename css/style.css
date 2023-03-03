@@ -14,7 +14,10 @@ footer{
     margin: auto;
 }
 
-
+.mova{
+    margin-left: 450px;
+    padding-top: 50px;
+}
 h1, h2,h3 {
     margin-left: 20px;
     font-size:45px;
@@ -117,3 +120,51 @@ color:rgb(240, 255, 255)
     margin-left: 20px; /* Додайте відступ між елементами списку */
     text-align: center;
 }
+.port{
+margin-left: 20px;
+font-size:45px;
+margin-left:45%;
+text-decoration-color: antiquewhite
+}
+.list1{
+    display: inline-block; 
+    transform: translate(-50%, -50%);
+    margin-left: 45%;
+}
+.list ul {
+    list-style-position: inside;
+    text-align:center;
+  }
+  .list ol {
+    list-style-position: inside;
+    text-align:center;
+  }
+  .list p {
+    text-align:center;
+  }
+  nav ul li a:hover {
+    color: rgb(154, 197, 247);
+  }
+.site-nav {
+    list-style: none;
+    margin: 0;
+    padding: 100px;
+    text-align: center; /* додайте цей стиль, щоб вирівняти елементи списку по центру */
+  }
+  
+  .site-nav-item {
+    display: inline-block; /* змінюємо float на display: inline-block, щоб вони можна було вирівнювати по центру */
+    margin-right: 20px;
+  }
+  
+  .site-nav-item:last-child {
+    margin-right: 0;
+  }
+  
+  .site-nav-item a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 80px; /* збільшуємо розмір шрифту до 50px */
+    font-family:Pristina;
+  }
