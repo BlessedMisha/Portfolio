@@ -1,0 +1,61 @@
+.table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+.row{		
+  clear: both;
+  overflow: hidden;
+}
+.cell {
+  display: flex;
+    align-items: center;
+  height: 45px;
+  width: 160px;
+  float: left;
+  border: 1px solid white;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: #94cce8;
+  color: white;
+  padding-left: 20px;
+}
+.cell1 {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  height: 45px;
+  width: 110px;
+  float: left;
+  border: 1px solid white;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: #cde6f4;
+}
+.cell2 {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  height: 45px;
+  width: 110px;
+  float: left;
+  border: 1px solid white;
+  box-sizing: border-box;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #94cce8;
+}
+.cell3 {
+  display: flex;
+    align-items: center;
+  height: 45px;
+  width: 160px;
+  float: left;
+  border: 1px solid white;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: #94cce8;
+  color: white;
+  padding-left: 20px;
+  font-weight: bold;
+}

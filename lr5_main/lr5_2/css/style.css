@@ -1,0 +1,24 @@
+table {
+  border-collapse: collapse;
+}
+td#sheet {
+  text-align: center;
+  background-color: #5dc430;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+td {
+  background-color: #d5ffb9;
+  border: 1px solid black;
+}
+td:nth-child(odd) {
+  background-color: #e6ffd3;
+}
+.name, .subject{
+  width: 65px;
+}
+.subjectg {
+  width: 165px;
+}

@@ -1,0 +1,18 @@
+th {
+    background-color: #94cce8;
+    color: white;
+    height: 40px;
+    width: 100px;
+}
+.comp {
+    background-color: #94cce8;
+    color: white;
+    height: 43px;
+    width: 158px;
+    text-align: left;
+    padding-left: 20px;
+}
+td {
+    background-color: #cde6f4;
+    text-align: center;
+}
