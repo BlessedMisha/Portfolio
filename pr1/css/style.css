@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d3d1d1;
+    padding: 10px;
+    width: 100%;
+    position: relative; /* Додаємо позиціонування для ::after */
+  }
+  
+  .container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 10px; /* Розмір відступу */
+    background-color: #d3d1d1; /* Колір сірого блоку */
+    border-top-right-radius: 10px; /* Закруглення правого верхнього кута */
+    border-bottom-right-radius: 10px; /* Закруглення правого нижнього кута */
+  }
+  
+  .number {
+    display: flex;
+    align-items: center;
+  }
+  
+  .green-background {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    width: 54px;
+  }
+  
+  .buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .button-minus {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  .button-plus {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  
+  .digit {
+    margin-left: 5px;
+    font-weight: bold;
+  }
+  
