@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fychak PI-20-02</title>
+</head>
+
+<body>
+    <H1>JavaScript Test</H1>
+    <HR>
+    <A HREF="" onClick="alert('Hello, world!'); ">Select mе!</А>
+    <HR>
+    <A HREF="#" onmouseover="writeMessage()">Select me!</A>
+    <hr>
+    <a href="#" onmouseover="writeMessage()">Hover over me to enter text</a>
+    <h1>Складання двох чисел</h1>
+    <label for="num1">Введіть перше число:</label>
+    <input type="text" id="num1">
+    <br>
+    <label for="num2">Введіть друге число:</label>
+    <input type="text" id="num2">
+    <br>
+    <button onclick="addNumbers()">Скласти</button>
+    <p id="result"></p>
+    <h1>Знайти найбільше число</h1>
+    <label for="num1">Введіть перше число:</label>
+    <input type="number" id="num3">
+    <br>
+    <label for="num2">Введіть друге число:</label>
+    <input type="number" id="num4">
+    <br>
+    <button onclick="findMax()">Знайти найбільше число</button>
+    <p id="result1"></p>
+    <h1>Визначення пори року</h1>
+    <label for="month">Введіть номер місяця (1-12):</label>
+    <input type="number" id="month">
+    <br>
+    <button onclick="determineSeason()">Визначити пору року</button>
+    <p id="resultyear"></p>
+    <h1>Підтвердження дії</h1>
+    <button onclick="showConfirmation()">Показати діалогове вікно</button>
+    <h1>Введення прізвищ і імен студентів</h1>
+    <label for="numberOfStudents">Введіть кількість студентів в групі:</label>
+    <input type="number" id="numberOfStudents">
+    <br>
+    <button onclick="inputStudentNames()">Ввести прізвища та імена студентів</button>
+    <p id="studentList"></p>
+    <h1>Введення прізвищ і імен студентів</h1>
+    <button onclick="inputStudentNames()">Ввести прізвища та імена студентів</button>
+    <p id="studentList"></p>
+    <h1>Таблиця множення</h1>
+    <table border="1">
+        <caption>Таблиця множення від 1 до 10</caption>
+        <tr>
+            <th> </th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+        </tr>
+
+        <script>
+            function writeMessage() {
+                document.write('Hello, world!');
+            }
+            // Функція, яка виводить діалогове вікно з кнопкою "OK"
+            function showDialog() {
+                var result = window.confirm("Натисніть 'OK', щоб вивести 'Hello, World!' у вікні браузера.");
+                if (result) {
+                    document.write("Hello, World!");
+                }
+            }
+            function writeMessage() {
+                var userInput = prompt("Please enter some text:");
+                if (userInput !== null) {
+                    alert("You entered: " + userInput);
+                }
+            }
+            function addNumbers() {
+                // Отримуємо значення введених чисел з полів вводу
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+
+                // Перевіряємо, чи обидва введені значення є числами
+                if (!isNaN(num1) && !isNaN(num2)) {
+                    // Виконуємо операцію додавання
+                    var sum = num1 + num2;
+
+                    // Виводимо результат на сторінці
+                    document.getElementById("result").textContent = "Результат: " + sum;
+                } else {
+                    // Якщо введені значення не є числами, виводимо повідомлення про помилку
+                    document.getElementById("result").textContent = "Будь ласка, введіть дійсні числа.";
+                }
+            }
+            function findMax() {
+            var num1 = parseFloat(document.getElementById("num3").value);
+            var num2 = parseFloat(document.getElementById("num4").value);
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                var max = Math.max(num1, num2);
+                document.getElementById("result1").textContent = "Найбільше число: " + max;
+            } else {
+                document.getElementById("result1").textContent = "Будь ласка, введіть дійсні числа.";
+            }
+        }
+        // 3.8
+        function determineSeason() {
+            var monthNumber = parseInt(document.getElementById("month").value);
+
+            if (!isNaN(monthNumber) && monthNumber >= 1 && monthNumber <= 12) {
+                var season;
+
+                switch (monthNumber) {
+                    case 12:
+                    case 1:
+                    case 2:
+                        season = "зима";
+                        break;
+                    case 3:
+                    case 4:
+                    case 5:
+                        season = "весна";
+                        break;
+                    case 6:
+                    case 7:
+                    case 8:
+                        season = "літо";
+                        break;
+                    case 9:
+                    case 10:
+                    case 11:
+                        season = "осінь";
+                        break;
+                }
+
+                document.getElementById("resultyear").textContent = "Пора року: " + season;
+            } else {
+                document.getElementById("resultyear").textContent = "Будь ласка, введіть коректний номер місяця (від 1 до 12).";
+            }
+        }
+        // 3.9
+        function showConfirmation() {
+            var result = confirm("Ви впевнені, що хочете виконати цю дію?");
+
+            if (result) {
+                alert("Ви натиснули 'ОК'. Дія підтверджена.");
+            } else {
+                alert("Ви натиснули 'Відміна'. Дія скасована.");
+            }
+        }
+        // 3.10
+        function inputStudentNames() {
+            var numberOfStudents = parseInt(document.getElementById("numberOfStudents").value);
+            var studentList = "";
+
+            if (!isNaN(numberOfStudents)) {
+                for (var i = 1; i <= numberOfStudents; i++) {
+                    var lastName = prompt("Введіть прізвище студента №" + i + ":");
+                    var firstName = prompt("Введіть ім'я студента №" + i + ":");
+
+                    if (lastName !== null && firstName !== null) {
+                        studentList += "Студент №" + i + ": " + lastName + " " + firstName + "<br>";
+                    } else {
+                        studentList += "Студент №" + i + ": Не введено<br>";
+                    }
+                }
+                document.getElementById("studentList").innerHTML = studentList;
+            } else {
+                document.getElementById("studentList").textContent = "Будь ласка, введіть коректну кількість студентів.";
+            }
+        }
+        // 3,11
+        function inputStudentNames() {
+            var studentList = "";
+            var i = 1;
+
+            while (true) {
+                var lastName = prompt("Введіть прізвище студента №" + i + ":");
+                var firstName = prompt("Введіть ім'я студента №" + i + ":");
+
+                if (lastName === null || firstName === null) {
+                    break; // Вихід з циклу при натисканні "Відміна"
+                }
+
+                studentList += "Студент №" + i + ": " + lastName + " " + firstName + "<br>";
+                i++;
+            }
+
+            if (i > 1) {
+                document.getElementById("studentList").innerHTML = studentList;
+            } else {
+                document.getElementById("studentList").textContent = "Не було введено жодного студента.";
+            }
+        }
+        // 3,12
+        for (var i = 1; i <= 10; i++) {
+                document.write("<tr>");
+                document.write("<th>" + i + "</th>");
+                for (var j = 1; j <= 10; j++) {
+                    document.write("<td>" + (i * j) + "</td>");
+                }
+                document.write("</tr>");
+            }
+        </script>
+</body>
+
+</html>
