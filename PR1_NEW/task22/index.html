@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task_22</title>
+</head>
+<body>
+    <h1>Функція sortByAge</h1>
+    <hr>
+
+    <div id="output"></div>
+
+    <script>
+        function sortByAge(users) {
+            users.sort(function (a, b) {
+                return a.age - b.age;
+            });
+        }
+
+        let myh = { name: "Михайло", age: 25 };
+        let fyh = { name: "Фичак", age: 30 };
+        let vlad = { name: "Владиславович", age: 28 };
+
+        let arr = [fyh, myh, vlad];
+
+        sortByAge(arr);
+
+        var outputDiv = document.getElementById('output');
+        for (let i = 0; i < arr.length; i++) {
+            var paragraph = document.createElement('p');
+            paragraph.textContent = "Ім'я: '" + arr[i].name + ', Вік: ' + arr[i].age;
+            outputDiv.appendChild(paragraph);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task_25</title>
+</head>
+<body>
+    <h1>Функція sumSalaries</h1>
+    <hr>
+
+    <div id="output"></div>
+
+    <script>
+        function sumSalaries(salaries) {
+            if (Object.keys(salaries).length === 0) {
+                return 0; // Об'єкт salaries порожній
+            }
+
+            let totalSalary = 0;
+            for (let salary of Object.values(salaries)) {
+                totalSalary += salary;
+            }
+
+            return totalSalary;
+        }
+
+        // Приклад використання
+        var salaries = {
+            "Bobik": 1023,
+            "Robik": 2504,
+            "Dolik": 20020
+        };
+
+        // Виведення результату на сторінку
+        var outputDiv = document.getElementById('output');
+        var resultParagraph = document.createElement('p');
+        resultParagraph.textContent = 'Сума заробітних плат: ' + sumSalaries(salaries);
+        outputDiv.appendChild(resultParagraph);
+    </script>
+</body>
+</html>

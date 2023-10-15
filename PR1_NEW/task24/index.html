@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task_24</title>
+</head>
+<body>
+    <h1>Функція getAverageAge</h1>
+    <hr>
+
+    <div id="output"></div>
+
+    <script>
+        function getAverageAge(users) {
+            if (users.length === 0) {
+                return 0;
+            }
+
+            var sum = 0;
+            for (var i = 0; i < users.length; i++) {
+                sum += users[i].age;
+            }
+
+            return sum / users.length;
+        }
+
+        var users = [
+            { name: "Bobik", age: 15 },
+            { name: "Robik", age: 45 },
+            { name: "Dolik", age: 65 }
+        ];
+
+        // Виведення початкових значень
+        var outputDiv = document.getElementById('output');
+        var initialParagraph = document.createElement('p');
+        initialParagraph.textContent = 'Початковий вік користувачів:';
+        outputDiv.appendChild(initialParagraph);
+
+        for (var i = 0; i < users.length; i++) {
+            var userParagraph = document.createElement('p');
+            userParagraph.textContent = users[i].name + ': ' + users[i].age;
+            outputDiv.appendChild(userParagraph);
+        }
+
+        // Обчислення середнього віку
+        var averageAge = getAverageAge(users);
+
+        // Виведення результату
+        var resultParagraph = document.createElement('p');
+        resultParagraph.textContent = 'Середній вік: ' + averageAge;
+        outputDiv.appendChild(resultParagraph);
+    </script>
+</body>
+</html>
