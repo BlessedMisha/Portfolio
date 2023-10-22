@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fychak3</title>
+</head>
+<body>
+    <h1>Останній день місяця</h1>
+
+    <p>Рік: <input type="text" id="yearInput" placeholder="Рік"></p>
+    <p>Місяць: <input type="text" id="monthInput" placeholder="Місяць (0-11)"></p>
+    <button onclick="showLastDayOfMonth()">Показати останній день місяця</button>
+    <p id="lastDayOutput"></p>
+
+    <script>
+        function getLastDayOfMonth(year, month) {
+            const nextMonthDate = new Date(year, month + 1, 1);
+            const lastDay = new Date(nextMonthDate - 1);
+            return lastDay.getDate();
+        }
+
+        function showLastDayOfMonth() {
+            const year = parseInt(document.getElementById('yearInput').value);
+            const month = parseInt(document.getElementById('monthInput').value);
+
+            const lastDay = getLastDayOfMonth(year, month);
+
+            document.getElementById('lastDayOutput').textContent = 'Останній день місяця: ' + lastDay;
+        }
+    </script>
+</body>
+</html>

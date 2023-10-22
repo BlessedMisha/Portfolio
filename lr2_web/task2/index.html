@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fychak2</title>
+</head>
+<body>
+    <h1>Дата та час</h1>
+
+    <p id="dateOutput"></p>
+
+    <script>
+        function getWeekDay(date) {
+            const daysOfWeek = ['НД', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+            
+            // Отримуємо номер дня тижня (0 - неділя, 1 - понеділок, і т.д.)
+            const dayOfWeek = date.getDay();
+            
+            // Використовуємо номер для отримання скороченого формату
+            return daysOfWeek[dayOfWeek];
+        }
+
+        // Приклад використання функції
+        const date = new Date('2005-03-06');
+        const weekDay = getWeekDay(date);
+
+        // Виведення результату на сторінку
+        document.getElementById('dateOutput').textContent = 'День тижня: ' + weekDay;
+    </script>
+</body>
+</html>

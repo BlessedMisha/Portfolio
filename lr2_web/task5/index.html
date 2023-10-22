@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fychak5</title>
+</head>
+<body>
+    <h1>Форматування дати</h1>
+
+    <p>Введіть дату і час: <input type="datetime-local" id="dateInput"></p>
+    <button onclick="formatAndDisplayDate()">Форматувати і вивести дату</button>
+    <p id="formattedDateOutput"></p>
+
+    <script>
+        function formatDate(date) {
+            const now = new Date();
+            const timeDiff = (now - date) / 1000;
+
+            if (timeDiff < 1) {
+                return "прямо зараз";
+            } else if (timeDiff < 60) {
+                return `${Math.floor(timeDiff)} сек. назад`;
+            } else if (timeDiff < 3600) {
+                return `${Math.floor(timeDiff / 60)} хв. назад`;
+            } else {
+                const day = date.getDate();
+                const month = date.getMonth() + 1;
+                const year = date.getFullYear() % 100;
+                const hours = date.getHours();
+                const minutes = date.getMinutes();
+
+                const addLeadingZero = (value) => (value < 10 ? "0" : "") + value;
+
+                return `${addLeadingZero(day)}.${addLeadingZero(month)}.${addLeadingZero(year)} ${addLeadingZero(hours)}:${addLeadingZero(minutes)}`;
+            }
+        }
+
+        function formatAndDisplayDate() {
+            const dateInput = document.getElementById('dateInput').value;
+            const selectedDate = new Date(dateInput);
+            const formattedDate = formatDate(selectedDate);
+            document.getElementById('formattedDateOutput').textContent = 'Форматована дата: ' + formattedDate;
+        }
+    </script>
+</body>
+</html>

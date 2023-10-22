@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fychak1</title>
+</head>
+<body>
+    <h1>Дата та час</h1>
+
+    <p id="dateOutput"></p>
+
+    <script>
+        // Створюємо об'єкт Date з вказаною датою та часом
+        var specifiedDate = new Date('2021-02-20T03:12:00');
+        
+        // Отримуємо рядок з датою та часом
+        var dateString = specifiedDate.toLocaleString();
+
+        // Виводимо дату на сторінці
+        document.getElementById('dateOutput').textContent = 'Вказана дата та час: ' + dateString;
+    </script>
+</body>
+</html>
