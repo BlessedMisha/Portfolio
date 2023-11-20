@@ -77,7 +77,7 @@ function applyVerticalAlign() {
 
 
 function applyVisibility() {
-    const text = document.querySelector('.text'); // Використовуйте правильний селектор для вашого текстового блоку
+    const text = document.querySelector('.text'); 
     const visibilityValue = document.getElementById('visibility').value;
 
     text.style.visibility = visibilityValue;
