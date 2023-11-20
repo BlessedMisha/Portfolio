@@ -4,15 +4,15 @@
   }
   
   .message-content {
-    background-color: rgb(196, 222, 196); /* Зелений фон для блоку повідомлення */
-    color: black; /* Білий колір тексту */
-    padding: 10px; /* Відступи всередині блоку повідомлення */
+    background-color: rgb(196, 222, 196);
+    color: black;
+    padding: 10px; 
     margin-bottom: 10px;
   }
   
   .hide-btn {
-    background-color: transparent; /* Прозорий фон для кнопки */
-    color: red; /* Червоний колір тексту кнопки */
+    background-color: transparent; 
+    color: red; 
     padding: 5px 10px;
     border: none;
     cursor: pointer;
