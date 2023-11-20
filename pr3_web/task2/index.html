@@ -16,7 +16,7 @@
       <li><img src="media/image2.jpg" alt="Image 3"></li>
       <li><img src="media/image1.jpg" alt="Image 3"></li>
       <li><img src="media/image3.jpg" alt="Image 3"></li>
-      <!-- Додайте більше елементів, якщо потрібно -->
+  
     </ul>
     <button class="prev-button">&lt;</button>
     <button class="next-button">&gt;</button>
@@ -42,10 +42,10 @@
   });
 
   function updateCarousel() {
-    // Вимикаємо стрілку "Вліво" при досягненні крайнього лівого положення
+    
     prevButton.disabled = currentPosition === 0;
 
-    // Вимикаємо стрілку "Вправо" при досягненні крайнього правого положення
+
     nextButton.disabled = currentPosition === -(itemWidth * (totalItems - 3));
 
     carouselList.style.transform = `translateX(${currentPosition}px)`;
