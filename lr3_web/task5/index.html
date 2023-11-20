@@ -14,9 +14,9 @@
 
         .pixel {
             font-family: 'Pixelify Sans', sans-serif;
-            font-size: 80px; /* Розмір шрифта капчі */
+            font-size: 80px; 
             display: inline;
-            color: #000; /* Колір тексту CAPTCHA */
+            color: #000; 
         }
 
         input[type="text"] {
@@ -46,7 +46,7 @@
     </div>
 
     <script>
-        // Функція для генерації випадкового числа заданої довжини
+       
         function generateRandomNumber(length) {
             let result = '';
             for (let i = 0; i < length; i++) {
@@ -55,7 +55,7 @@
             return result;
         }
 
-        // Функція для створення CAPTCHA
+    
         function createCaptcha(digits) {
             const captchaElement = document.getElementById("captcha");
             const randomNumber = generateRandomNumber(digits);
@@ -69,7 +69,7 @@
             }
         }
 
-        // Функція для перевірки правильності введення CAPTCHA
+    
         function checkCaptcha() {
             const captchaElement = document.getElementById("captcha");
             const captchaInput = document.getElementById("captchaInput");
@@ -83,11 +83,11 @@
                 message.style.color = 'red';
             }
 
-            // Ініціалізуємо нову CAPTCHA після перевірки
+          
             createCaptcha(2);
         }
 
-        // Ініціалізуємо CAPTCHA з 2 цифр
+       
         createCaptcha(2);
     </script>
 </body>
