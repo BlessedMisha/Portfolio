@@ -37,20 +37,17 @@
         </li>
       </ul>
     <script>
-        // Отримуємо всі кнопки приховування за допомогою querySelectorAll
 const hideButtons = document.querySelectorAll('.hide-btn');
 
-// Додаємо обробник події для кожної кнопки
 hideButtons.forEach(button => {
   button.addEventListener('click', hideMessage);
 });
 
-// Функція, яка приховує батька кнопки (тобто батьківський div)
 function hideMessage(event) {
   const button = event.target;
   const messageDiv = button.parentNode;
 
-  // Приховуємо батька
+
   messageDiv.style.display = 'none';
 }
 
