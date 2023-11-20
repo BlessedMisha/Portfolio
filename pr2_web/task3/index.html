@@ -19,13 +19,13 @@ function printTextWithEffect(text) {
       container.textContent += text.charAt(index);
       index++;
     } else {
-      clearInterval(intervalId); // Зупинити setInterval, коли весь текст виведено
+      clearInterval(intervalId); 
     }
-  }, 100); // Затримка в мілісекундах між символами
+  }, 100); 
 }
 
 function startPrinting() {
-  document.getElementById("printer-container").textContent = ''; // Очистити вміст контейера
+  document.getElementById("printer-container").textContent = ''; 
   const inputText = prompt("Введіть текст для виведення:");
   if (inputText) {
     printTextWithEffect(inputText);
