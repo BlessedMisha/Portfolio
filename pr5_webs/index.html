@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fyrchikMisha</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>ToDo List</h1>
+        <div class="controls">
+            <label for="sortSelector">Сортувати за:</label>
+            <select id="sortSelector">
+                <option value="text">Ім'я</option>
+                <option value="taskDate">Дата додавання</option>
+                <option value="completed">Виконано</option>
+            </select>
+            <button id="sortButton">Сортування завдань</button>
+        </div>
+        <input type="text" id="newTask" placeholder="Нове завдання">
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

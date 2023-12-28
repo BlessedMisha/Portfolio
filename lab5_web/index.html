@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="css/style.css" media="screen">
+</head>
+
+<body>
+    <img class="cart" src="https://img.icons8.com/sf-regular-filled/48/shopping-cart.png" alt="shopping-cart" />
+    <span id="cartItemCount">0</span>  
+    <div id="wrapper">
+        <div class="wrap">
+            <div class="swipe leftsw"> &#60;</div>
+            <div class="swipe rightsw">&#62;</div>
+            <div class="panel" data-product='{"name": "Samsung Odyssey Ark S55BG970NI", "price": "Ціна товару"}'>
+                <div class="note new">
+                    <span>новинка</span>
+                </div>
+                <div class="categor">
+                    <a
+                        href="https://www.sinsay.com/ua/uk/cholovik/odiah/shtany">
+                        Штани
+                    </a>
+                </div>
+                <hr>
+                <div class="pic">
+                    <a href="https://www.sinsay.com/ua/uk/trykotazhni-dzhohery-1959o-9mm">
+                        <img src="media/shtany1.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="prod bold">
+                    <a href="https://www.sinsay.com/ua/uk/trykotazhni-dzhohery-1959o-9mm"
+                        title="Штани за 40 гривень">
+                        Штани за 40 гривень
+                    </a>
+                </div>
+                <div class="costs bold">
+                    <span class="old-price"></span>
+                    <span class="price"></span>
+                </div>
+                <div>
+                    <a class="btn soon bold" href="#">незабаром у продажі</a>
+                </div>
+            </div>
+            <div class="panel" data-product='{"name": "Скороходи люті", "price": "1 500 ₴"}'>
+                <div class="categor">
+                    <a
+                        href="https://www.sinsay.com/ua/uk/cholovik/vzuttia-i-aksesuary/vzuttia-i-kaptsi">
+                        Взуття
+                    </a>
+                </div>
+                <hr>
+                <div class="pic">
+                    <a href="https://www.sinsay.com/ua/uk/vzuttia-5978x-99x">
+                        <img src="media/shoes.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="prod bold">
+                    <a href="https://www.sinsay.com/ua/uk/vzuttia-5978x-99x" title="Скороходи люті">
+                        Скороходи люті
+                    </a>
+                </div>
+                <div class="costs bold">
+                    <span class="old-price">1 000 123 ₴</span>
+                    <span class="price">1 500 ₴</span>
+                </div>
+                <div>
+                    <a class="btn avl bold addToCartBtn" href="#">у корзину</a>
+                </div>
+            </div>
+            <div class="panel" data-product='{"name": "Футболочка Нуке", "price": "2 400 ₴"}'>
+                <div class="note hit">
+                    <span>хіт продажів</span>
+                </div>
+                <div class="categor">
+                    <a
+                        href="https://www.sinsay.com/ua/uk/cholovik/odiah/futbolky">
+                        Футболки
+                    </a>
+                </div>
+                <hr>
+                <div class="pic">
+                    <a href="https://www.sinsay.com/ua/uk/futbolka-z-pryntom-0229t-99x">
+                        <img src="media/shirt.jpg" alt="img">
+                    </a>
+                </div>
+                <div class="prod bold">
+                    <a href="https://www.sinsay.com/ua/uk/futbolka-z-pryntom-0229t-99x" title="Футболочка Нуке">
+                        Футболочка Нуке
+                    </a>
+                </div>
+                <div class="costs bold">
+                    <span class="old-price">5 000 ₴</span>
+                    <span class="price">2 400 ₴</span>
+                </div>
+                <div>
+                    <a class="btn avl bold addToCartBtn" href="#">у корзину</a>
+                </div>
+            </div>
+            <div class="panel" data-product='{"name": "Світшотик Нюк", "price": "2 500 ₴"}'>
+                <div class="note hit">
+                    <span>хіт продажів</span>
+                </div>
+                <div class="categor">
+                    <a
+                        href="https://www.sinsay.com/ua/uk/cholovik/odiah/svitshoty">
+                        Світшоти
+                    </a>
+                </div>
+                <hr>
+                <div class="pic">
+                    <a href="https://www.sinsay.com/ua/uk/svitshot-1728o-55x">
+                        <img src="media/swshirt.png" alt="img">
+                    </a>
+                </div>
+                <div class="prod bold">
+                    <a href="https://www.sinsay.com/ua/uk/svitshot-1728o-55x"
+                        title="Світшотик Нюк">
+                        Світшотик Нюк
+                    </a>
+                </div>
+                <div class="costs bold">
+                    <span class="old-price"></span>
+                    <span class="price">2 500 ₴</span>
+                </div>
+                <div>
+                    <a class="btn avl bold addToCartBtn" href="#">у корзину</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="addedToCartModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Товар <span id="productNameAdded"></span> додано до корзини за <span id="productPriceAdded"></span> ₴ за
+            <span id="productQuantityAdded"></span> шт.</p>
+        <button class="btnToCart">Перейти у корзину</button>
+        <button class="btnContinueShopping">Продовжити покупки</button>
+    </div>
+
+    <div class="modal" id="emptyCartModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Корзина пуста</p>
+    </div>
+
+    <div class="modal" id="addingToCartModal">
+        <span class="close" id="addingToCartCloseBtn" onclick="closeModal()">&times;</span>
+        <p>Додати до кошика: </p>
+        <span id="productNameAdd"></span> Ціна за шт. <span id="productPriceAdd"></span> ₴</p> у кількості:
+        <input type="number" min="1" max="50" id="productQuantityAdd">
+        <p>Загальна вартість: <span id="totalPriceAdd"></span> ₴</p>
+        <button id="addToCartBtn" class="btnAdd addToCartBtn">Додати до корзини</button>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
