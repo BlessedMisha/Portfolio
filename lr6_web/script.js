@@ -1,7 +1,7 @@
 const products = document.querySelector('#products')
 const productsAxios = document.querySelector('#productsAxios')
 
-const requestURL = 'https://ruslantuz.github.io/lab_js/lr_6/json/example.json';
+const requestURL = 'https://blessedmisha.github.io/Portfolio/lr6_web/json/example.json';
 
 const request = new XMLHttpRequest();
 request.open('GET', requestURL);
